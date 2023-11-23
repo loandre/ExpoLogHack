@@ -10,6 +10,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
         padding: theme.spacing(1),
     },
     '& .MuiFormControlLabel-root': {
+        alignItems: 'flex-start',
         margin: theme.spacing(1),
     },
     '& .submitButton': {
@@ -35,12 +36,12 @@ const Integracoes = () => {
     };
 
     const OptionLabel = ({ title, description }) => (
-        <Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Typography variant="subtitle1" component="span" sx={{ fontWeight: 'bold' }}>
                 {title}
             </Typography>
             <Typography variant="body2" component="span">
-                {`: ${description}`}
+                {description}
             </Typography>
         </Box>
     );
