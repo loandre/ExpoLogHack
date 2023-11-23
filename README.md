@@ -39,7 +39,7 @@ Este projeto, desenvolvido pela equipe Coders Ceará, para o Hackathon que acont
 
 ## 🖥️ Vídeo Demonstrativo
 
-[Link do vídeo demonstrativo do projeto SemeIA](https://github.com/semeia/assets/135539245/c05ce778-573f-434a-b273-4be6874140d5)
+[Link do vídeo demonstrativo do projeto SemeIA]()
 
 ## 📝 Notas Importantes
 
