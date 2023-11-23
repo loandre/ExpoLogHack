@@ -23,6 +23,7 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
+            <Route path="/" element={<SemeIA />} />
               <Route path="/semeiaassist" element={<SemeIA />} />
               <Route path="/analises" element={<Analises />} />
               <Route path="/integracoes" element={<Integracoes />} />
