@@ -1,0 +1,46 @@
+.App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.iframe-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima dos iframes */
+    margin: auto;
+    flex-wrap: wrap; /* Permite que os iframes se envolvam conforme necessário */
+}
+
+.iframe-powerbi, .iframe-chatbot {
+    flex: 1; /* Os iframes compartilharão o espaço disponível */
+    min-width: 50%; /* No mínimo, cada iframe terá metade da largura do container */
+    aspect-ratio: 16 / 9; /* Mantém a proporção */
+    height: auto; /* Altura automática para manter a proporção */
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .iframe-container {
+        flex-direction: row;
+    }
+
+    .iframe-powerbi, .iframe-chatbot {
+        min-width: 100%; /* Em telas menores, cada iframe usará a largura total disponível */
+        height: auto; /* Ajusta a altura para manter a proporção */
+    }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+    .iframe-container {
+        flex-direction: row;
+    }
+    
+    .iframe-powerbi, .iframe-chatbot {
+        min-width: 50%; /* Em orientação paisagem, cada iframe tentará ocupar metade da largura */
+    }
+}
