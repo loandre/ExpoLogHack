@@ -7,7 +7,6 @@ import { tokens } from '../../theme';
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import IntegrationInstructionsOutlinedIcon from '@mui/icons-material/IntegrationInstructionsOutlined';
-import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
@@ -145,13 +144,6 @@ const Sidebar = () => {
               title="Integrações"
               to="/integracoes"
               icon={<IntegrationInstructionsOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Gerenciar Equipe"
-              to="/gerenciarequipe"
-              icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
