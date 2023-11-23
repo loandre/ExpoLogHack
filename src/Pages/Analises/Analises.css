@@ -33,16 +33,16 @@
   }
 
   .iframe-container {
-      flex-direction: row; /* Ajuste para a direção da linha */
+      flex-direction: row; 
   }
 
   .iframe-container .iframe-powerbi {
-      flex: 0 0 70%; /* Ocupa 70% da largura */
+      flex: 0 0 60%; 
       height: 50vh;
   }
 
   .iframe-container .iframe-chatbot {
-      flex: 0 0 30%; /* Ocupa 30% da largura */
+      flex: 0 0 40%;
       height: 50vh;
   }
 }

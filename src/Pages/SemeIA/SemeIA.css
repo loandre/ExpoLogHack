@@ -22,7 +22,7 @@
 .iframe-container .iframe-chatbot {
   border: none;
   width: 100%;
-  height: 50vh; /* Altura padrão para dispositivos móveis e por padrão */
+  height: 50vh;
   min-height: 300px;
 }
 
@@ -33,21 +33,17 @@
   }
 
   .iframe-container {
-      flex-direction: row; /* Ajuste para a direção da linha */
-  }
-
-  .iframe-container .iframe-powerbi,
-  .iframe-container .iframe-chatbot {
-      flex-basis: auto; /* Ajusta a base de flexibilidade */
-      height: 70vh; /* Aumenta a altura para as telas desktop */
+      flex-direction: row; 
   }
 
   .iframe-container .iframe-powerbi {
-      flex-grow: 0.4; /* Ocupa cerca de 70% da largura */
+      flex: 0 0 60%; 
+      height: 50vh;
   }
 
   .iframe-container .iframe-chatbot {
-      flex-grow: 0.6; /* Ocupa cerca de 30% da largura */
+      flex: 0 0 40%;
+      height: 50vh;
   }
 }
 
