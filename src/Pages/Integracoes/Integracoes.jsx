@@ -20,7 +20,6 @@ function SupportScreen() {
                     <option value="">Selecione uma opção</option>
                     <option value="compostagem">Compostagem Inteligente</option>
                     <option value="irrigacao">Irrigação Inteligente</option>
-                    {/* Adicione aqui mais opções inteligentes do mercado */}
                 </select>
 
                 {isOptionSelected && (

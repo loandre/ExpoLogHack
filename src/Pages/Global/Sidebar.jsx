@@ -40,9 +40,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      // Mantenha a lógica original
       const shouldCollapse = window.innerWidth <= 768;
-      // Adicione a lógica para verificar a orientação horizontal
       const isLandscape = window.matchMedia("(orientation: landscape)").matches;
       setIsCollapsed(shouldCollapse || isLandscape);
     };

@@ -1,12 +1,17 @@
 import React from 'react';
+import { Box } from '@mui/material';
+import Header from '../../components/Header'; 
 import './SemeIA.css';
 
 function App() {
   return (
     <div className="App">
+      <Box m="20px">
+        <Header title="SemeIA Assist" subtitle="Ferramenta Assistiva Corretiva" />
+      </Box>
       <header className="App-header">
         <div className="iframe-container">
-          <iframe 
+          <iframe
             title="Power BI Integration Frame"
             className="iframe-powerbi"
             src="https://app.powerbi.com/view?r=eyJrIjoiZDE3ZTVjMWMtZmFmOS00ZjZjLWEyYzItNDY4OTY1OWY4NzVjIiwidCI6IjU5YjdmNDVjLTdjNzYtNDNjMi1iOTU2LTRlNzlhNzNkOWEzNiJ9"

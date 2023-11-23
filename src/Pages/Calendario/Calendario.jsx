@@ -52,7 +52,7 @@ const Calendar = () => {
 
   return (
     <Box m="20px">
-      <Header title="CALENDÁRIO" subtitle="Página interativa do Calendário" />
+      <Header title="Calendário" subtitle="Página interativa do Calendário" />
 
       <Box display="flex" flexDirection={isMobile ? 'column' : 'row'} justifyContent="space-between" m={isMobile ? '10px' : '0'}>
         {/* CALENDAR SIDEBAR */}

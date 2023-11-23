@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./Pages/Global/Topbar"; 
 import Sidebar from "./Pages/Global/Sidebar";
-// import NewPoint from "./Pages/NewPoint/NewPoint";
 import SemeIA from "./Pages/SemeIA/SemeIA";
 import Analises from "./Pages/Analises/Analises";
 import Integracoes from "./Pages/Integracoes/Integracoes";
@@ -25,11 +24,9 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-              {/* <Route path="/" element={<Team />} /> */}
               <Route path="/gerenciarequipe" element={<Gerenciar />} />
               <Route path="/semeiaassist" element={<SemeIA />} />
               <Route path="/analises" element={<Analises />} />
-              {/* <Route path="/registrodeponto" element={<NewPoint />} /> */}
               <Route path="/integracoes" element={<Integracoes />} />
               <Route path="/perguntasfrequentes" element={<FAQ />} />
               <Route path="/calendario" element={<Calendar />} />

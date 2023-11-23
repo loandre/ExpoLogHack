@@ -9,41 +9,48 @@
   margin: 0;
 }
 
+/* Ajuste para telas grandes */
+@media (min-width: 769px) {
+  .App-header {
+    padding-top: 100px !important;
+  }
+}
+
 .iframe-container {
   display: flex;
-  flex-wrap: nowrap; /* Evita que os iframes se empilhem */
+  flex-wrap: nowrap;
   width: 100%;
-  justify-content: space-around; /* Distribui os iframes uniformemente */
-  align-items: stretch; /* Estica os iframes para preencher o container */
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 .iframe-powerbi, .iframe-chatbot {
   border: none;
-  flex: 1; /* Permite que os iframes cresçam e se ajustem proporcionalmente */
-  width: 50%; /* Inicia com metade da largura do container */
-  height: 50vh; /* Define uma altura baseada na altura do viewport */
-  min-height: 300px; /* Define uma altura mínima para evitar cortes */
+  flex: 1; 
+  width: 50%; 
+  height: 50vh;
+  min-height: 300px;
 }
 
 @media (max-width: 768px) {
   .iframe-container {
-      flex-direction: column; /* Empilha os iframes verticalmente em telas menores */
+      flex-direction: column;
   }
 
   .iframe-powerbi, .iframe-chatbot {
-      width: 100%; /* Cada iframe ocupa 100% da largura do container em telas menores */
-      height: auto; /* Ajusta a altura para manter a proporção */
+      width: 100%; 
+      height: auto;
   }
 }
 
 @media (orientation: landscape) and (max-width: 768px) {
   .iframe-container {
-      flex-direction: row; /* Mantém os iframes lado a lado na orientação paisagem */
+      flex-direction: row; 
   }
 
   .iframe-powerbi, .iframe-chatbot {
-      width: 50%; /* Mantém cada iframe com metade da largura do container */
-      height: 30vh; /* Ajusta a altura para a paisagem */
-      min-height: 300px; /* Mantém uma altura mínima */
+      width: 50%;
+      height: 30vh;
+      min-height: 300px;
   }
 }
