@@ -43,11 +43,11 @@
   }
 
   .iframe-container .iframe-powerbi {
-      flex-grow: 0.7; /* Ocupa cerca de 70% da largura */
+      flex-grow: 0.4; /* Ocupa cerca de 70% da largura */
   }
 
   .iframe-container .iframe-chatbot {
-      flex-grow: 0.3; /* Ocupa cerca de 30% da largura */
+      flex-grow: 0.6; /* Ocupa cerca de 30% da largura */
   }
 }
 

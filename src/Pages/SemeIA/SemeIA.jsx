@@ -14,7 +14,7 @@ function App() {
           <iframe
             title="Power BI Integration Frame"
             className="iframe-powerbi"
-            src="https://app.powerbi.com/view?r=eyJrIjoiZDE3ZTVjMWMtZmFmOS00ZjZjLWEyYzItNDY4OTY1OWY4NzVjIiwidCI6IjU5YjdmNDVjLTdjNzYtNDNjMi1iOTU2LTRlNzlhNzNkOWEzNiJ9"
+            src="https://app.powerbi.com/view?r=eyJrIjoiY2VjMDhmMTMtNjY0Ni00MTFlLTk2ZGYtZWVlNDk0ZjM1OTA0IiwidCI6IjU5YjdmNDVjLTdjNzYtNDNjMi1iOTU2LTRlNzlhNzNkOWEzNiJ9"
             frameBorder="0"
             allowFullScreen={true}
           ></iframe>
