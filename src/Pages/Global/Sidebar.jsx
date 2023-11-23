@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Box, IconButton, Typography, useTheme } from '@mui/material';
 import { Link } from 'react-router-dom';
 import 'react-pro-sidebar/dist/css/styles.css';
 import { tokens } from '../../theme';
-// import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';]
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import IntegrationInstructionsOutlinedIcon from '@mui/icons-material/IntegrationInstructionsOutlined';
-// import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
-// import BallotIcon from '@mui/icons-material/Ballot';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
@@ -35,29 +31,28 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 };
 
 const Sidebar = () => {
-  // const navigate = useNavigate();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(window.innerWidth <= 768);
   const [selected, setSelected] = useState("Dashboard");
   const logoFileName = theme.palette.mode === 'dark' ? 'logo2.png' : 'logo1.png';
   const farmManagerColor = theme.palette.mode === 'dark' ? '#fff' : '#014433';
-  // const registerButtonColor = theme.palette.mode === 'dark' ? '#52a10e' : '#014433';
-  // const registerButtonBorderColor = theme.palette.mode === 'dark' ? '#52a10e' : '#014433';
-
-  // const redirectToTimeClock = () => {
-  //   navigate("/registrodeponto");
-  // };
 
   useEffect(() => {
     const handleResize = () => {
-      setIsCollapsed(window.innerWidth <= 768);
+      // Mantenha a lógica original
+      const shouldCollapse = window.innerWidth <= 768;
+      // Adicione a lógica para verificar a orientação horizontal
+      const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+      setIsCollapsed(shouldCollapse || isLandscape);
     };
 
     window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
     };
   }, []);
 
@@ -106,17 +101,6 @@ const Sidebar = () => {
             )}
           </MenuItem>
 
-          {/* {isCollapsed && (
-            <MenuItem
-              style={{
-                color: colors.grey[100],
-              }}
-              onClick={redirectToTimeClock}
-              icon={<AccessAlarmsIcon />}
-            >
-            </MenuItem>
-          )} */}
-
           {!isCollapsed && (
             <Box mb="25px">
               <Box display="flex" justifyContent="center" alignItems="center">
@@ -140,20 +124,6 @@ const Sidebar = () => {
                 <Typography variant="h5" style={{ color: farmManagerColor }}>
                   Farm Manager
                 </Typography>
-                {/* <Button
-                  variant="outlined"
-                  style={{
-                    borderColor: registerButtonBorderColor,
-                    color: registerButtonColor,
-                    marginTop: '10px',
-                  }}
-                  onClick={redirectToTimeClock}
-                >
-                  <Box display="flex" alignItems="center">
-                    <AccessAlarmsIcon style={{ marginRight: '8px' }} />
-                    REGISTRAR PONTO
-                  </Box>
-                </Button> */}
               </Box>
             </Box>
           )}
