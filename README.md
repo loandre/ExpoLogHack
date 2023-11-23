@@ -73,6 +73,9 @@ Para executar o projeto localmente, siga os passos abaixo:
  	```sh
  	npm start
 
+
+### 
+
 # 🌟 Agradecimentos
 Agradecimentos especiais ao idealizador e organizador do evento do Hackathon, Marco Riveiros, e à equipe Coders Ceará, cuja colaboração foi essencial para a realização deste projeto. Agradecemos também a todos os agro-empresários e especialistas que contribuíram com insights valiosos durante o desenvolvimento do SemeIA.
 
