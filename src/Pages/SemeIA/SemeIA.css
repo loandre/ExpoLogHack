@@ -1,46 +1,49 @@
 .App-header {
-  min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+  margin: 0;
 }
 
 .iframe-container {
   display: flex;
+  flex-wrap: nowrap; /* Evita que os iframes se empilhem */
   width: 100%;
-  max-width: 1200px; /* Limita a largura máxima dos iframes */
-  margin: auto;
-  flex-wrap: wrap; /* Permite que os iframes se envolvam conforme necessário */
+  justify-content: space-around; /* Distribui os iframes uniformemente */
+  align-items: stretch; /* Estica os iframes para preencher o container */
 }
 
 .iframe-powerbi, .iframe-chatbot {
-  flex: 1; /* Os iframes compartilharão o espaço disponível */
-  min-width: 50%; /* No mínimo, cada iframe terá metade da largura do container */
-  aspect-ratio: 16 / 9; /* Mantém a proporção */
-  height: auto; /* Altura automática para manter a proporção */
-  border: 0;
+  border: none;
+  flex: 1; /* Permite que os iframes cresçam e se ajustem proporcionalmente */
+  width: 50%; /* Inicia com metade da largura do container */
+  height: 50vh; /* Define uma altura baseada na altura do viewport */
+  min-height: 300px; /* Define uma altura mínima para evitar cortes */
 }
 
 @media (max-width: 768px) {
   .iframe-container {
-      flex-direction: row;
+      flex-direction: column; /* Empilha os iframes verticalmente em telas menores */
   }
 
   .iframe-powerbi, .iframe-chatbot {
-      min-width: 100%; /* Em telas menores, cada iframe usará a largura total disponível */
+      width: 100%; /* Cada iframe ocupa 100% da largura do container em telas menores */
       height: auto; /* Ajusta a altura para manter a proporção */
   }
 }
 
 @media (orientation: landscape) and (max-width: 768px) {
   .iframe-container {
-      flex-direction: row;
+      flex-direction: row; /* Mantém os iframes lado a lado na orientação paisagem */
   }
-  
+
   .iframe-powerbi, .iframe-chatbot {
-      min-width: 50%; /* Em orientação paisagem, cada iframe tentará ocupar metade da largura */
+      width: 50%; /* Mantém cada iframe com metade da largura do container */
+      height: 30vh; /* Ajusta a altura para a paisagem */
+      min-height: 300px; /* Mantém uma altura mínima */
   }
 }
