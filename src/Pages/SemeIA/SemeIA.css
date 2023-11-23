@@ -37,12 +37,12 @@
   }
 
   .iframe-container .iframe-powerbi {
-      flex: 0 0 65%; 
+      flex: 0 0 70%; 
       height: 50vh;
   }
 
   .iframe-container .iframe-chatbot {
-      flex: 0 0 45%;
+      flex: 0 0 30%;
       height: 50vh;
   }
 }
