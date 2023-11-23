@@ -33,6 +33,7 @@ const Integracoes = () => {
 
     const handleSubmit = () => {
         console.log("Opção selecionada:", selectedOption);
+        window.alert("Sua solicitação foi recebida. Nossa equipe entrará em contato.");
     };
 
     const OptionLabel = ({ title, description }) => (
@@ -99,7 +100,7 @@ const Integracoes = () => {
                     variant="contained"
                     className="submitButton"
                     onClick={handleSubmit}>
-                    Submeter
+                    Envie sua Solicitação
                 </Button>
             </StyledPaper>
         </div>
